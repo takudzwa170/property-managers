@@ -44,7 +44,7 @@ export default function StaffDashboard() {
       </div>
 
       {tasks.length === 0 ? (
-        <div className="glass-card" style={{ textAlign: 'center', py: '4rem', opacity: 0.5 }}>
+        <div className="glass-card" style={{ textAlign: 'center', paddingTop: '4rem', paddingBottom: '4rem', opacity: 0.5 }}>
             <p>No tasks currently assigned to you.</p>
         </div>
       ) : (
