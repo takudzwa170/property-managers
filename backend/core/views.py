@@ -10,6 +10,14 @@ from .serializers import (
 )
 from .permissions import IsManager, IsStaff, IsResident, MaintenanceRequestPermission
 from django.db.models import Count, Avg, F
+import logging
+
+logger = logging.getLogger(__name__)
+
+class HealthCheckView(views.APIView):
+    permission_classes = [permissions.AllowAny]
+    def get(self, request):
+        return Response({"status": "ok", "detail": "DispatchPro Backend is healthy"})
 
 class CSRFTokenView(views.APIView):
     permission_classes = [permissions.AllowAny]
