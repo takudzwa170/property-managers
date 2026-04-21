@@ -7,6 +7,7 @@ import ManagerDashboard from '@/components/dashboards/ManagerDashboard';
 import StaffDashboard from '@/components/dashboards/StaffDashboard';
 import ResidentDashboard from '@/components/dashboards/ResidentDashboard';
 import ThemePicker from '@/components/ThemePicker';
+import NotificationCenter from '@/components/NotificationCenter';
 
 export default function DashboardPage() {
   const { user, loading, logout } = useAuth();
