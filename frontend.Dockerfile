@@ -11,11 +11,12 @@ RUN npm install
 # Copy project
 COPY . .
 
-# Build app (optional for dev, but good for SaaS completeness)
-# RUN npm run build
+# Build app for production
+RUN npm run build
 
 # Expose port
 EXPOSE 3000
 
-# Start app
-CMD ["npm", "run", "dev"]
+# Start app in production mode
+CMD ["npm", "start"]
+
