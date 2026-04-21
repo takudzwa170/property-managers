@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8000/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
 export async function fetchWithAuth(endpoint: string, options: RequestInit = {}) {
   const url = `${API_URL}${endpoint}`;
